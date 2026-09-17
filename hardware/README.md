@@ -2,6 +2,8 @@
 
 En esta sección se detalla el diseño mecánico, la selección de actuadores, la manufactura de piezas 3D y la integración electrónica de la plataforma CNC. La máquina está diseñada bajo un enfoque de arquitectura abierta y bajo costo, transfiriendo la complejidad de la precisión mecánica hacia los algoritmos de control inteligente.
 
+![Texto alternativo (para accesibilidad)](MAQUINA_CNC.jpeg)
+
 ## Arquitectura General
 
 El diseño se basa en una estructura cartesiana de 3 ejes accionada por motores paso a paso y controlada por una arquitectura distribuida:
