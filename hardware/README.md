@@ -15,7 +15,7 @@ El diseño se basa en una estructura cartesiana de 3 ejes accionada por motores 
 
 ---
 
-## 🖨️ Componentes Impresos en 3D (STL)
+## Componentes Impresos en 3D (STL)
 
 Todas las piezas personalizadas fueron manufacturadas mediante deposición fundida (FDM). Puedes encontrar los archivos `.stl` listos para imprimir en la carpeta `3d_stl_parts/` de este directorio.
 
