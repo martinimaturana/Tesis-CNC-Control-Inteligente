@@ -58,7 +58,7 @@ El tablero de control utiliza una fuente de 24 VDC / 14.6A para la etapa de pote
 
 ## Lista de Materiales (BOM)
 
-El costo directo de hardware (BOM) estimado de esta plataforma es de ~$769 USD, demostrando que es posible obtener precisión submilimétrica compitiendo con maquinarias de gama alta mediante el uso de inteligencia computacional.
+El costo directo de hardware (BOM) estimado de esta plataforma es de ~$769 USD, demostrando que es posible obtener buena precisión mediante el uso de inteligencia computacional.
 
 *   **Estructura:** Perfiles de aluminio V-Slot (40x20 y 40x40), 1 kg PLA+.
 *   **Transmisión:** 2x Kits C-Beam XL 1000, 1x riel lineal T-type (100mm), correa y polea GT2.
