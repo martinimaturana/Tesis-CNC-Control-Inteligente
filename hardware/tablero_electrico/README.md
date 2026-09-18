@@ -2,7 +2,20 @@
 
 Esta carpeta contiene la documentación, esquemáticos y piezas 3D (`.stl`) relacionadas con el diseño y ensamblaje del tablero eléctrico de la plataforma CNC. El diseño del tablero se centralizó para facilitar el ensamblaje, favorecer la disipación térmica y reducir las interferencias electromagnéticas.
 
-![Diagrama Eléctrico](../Imagenes/TABLERO_CNC.png) ![Diagrama Eléctrico](../Imagenes/tablero_cnc_real.jpeg)
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="../Imagenes/TABLERO_CNC.png" width="100%">
+    </td>
+    <td align="center">
+      <img src="../Imagenes/tablero_cnc_real.jpeg" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD tridimensional</b></td>
+    <td align="center"><b>(b) Implementación física real</b></td>
+  </tr>
+</table>
 
 ## Distribución Espacial
 
