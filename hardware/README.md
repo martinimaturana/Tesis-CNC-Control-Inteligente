@@ -27,16 +27,130 @@ Todas las piezas personalizadas fueron manufacturadas mediante deposición fundi
 *   **Perímetros (Paredes):** 4 perímetros.
 
 ### Listado de Piezas:
-1.  `soporte_base_puente.stl`: Base trapezoidal para el acople del pórtico X sobre los carros Y.
-2.  `acople_motor_x.stl`: Soporte con nervadura de refuerzo para el motor NEMA 17.
-3.  `acople_polea_suelta.stl`: Soporte para la polea de reenvío GT2 del eje X.
-4.  `acople_carro_eje_z.stl`: Interfaz estructural para vincular el módulo lineal del eje Z al carro del eje X.
-5.  `acople_marcador.stl`: Efector final (porta-herramientas) con retención cilíndrica.
-6.  `acople_correa_dentada.stl`: Mordaza o sujetador dentado para fijar la correa GT2 al carro móvil.
-7.  **Carcasas y Soportes para Sensores AS5600:**
-    *   `carcasa_as5600_nema23.stl` y `soporte_iman_nema23.stl`
-    *   `carcasa_as5600_nema17.stl` y `soporte_iman_nema17.stl`
-    *   `carcasa_as5600_nema11.stl` y `soporte_iman_nema11.stl`
+
+#### 1. Soporte Base del Puente X (`soporte_base_puente.stl`)
+Base trapezoidal para el acople del pórtico X sobre los carros Y.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/soporte_puente_cad.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/soporte_puente_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD</b></td>
+    <td align="center"><b>(b) Pieza impresa e instalada</b></td>
+  </tr>
+</table>
+
+#### 2. Acople Motor Eje X (`acople_motor_x.stl`)
+Soporte con nervadura de refuerzo para el motor NEMA 17.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_4040.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_4040_realjpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD</b></td>
+    <td align="center"><b>(b) Pieza impresa e instalada</b></td>
+  </tr>
+</table>
+
+#### 3. Soporte Polea de Reenvío (`acople_polea_suelta.stl`)
+Soporte para la polea libre de reenvío GT2 del eje X.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_polea_suelta.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_polea_suelta_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD</b></td>
+    <td align="center"><b>(b) Pieza impresa e instalada</b></td>
+  </tr>
+</table>
+
+#### 4. Acople Módulo Eje Z (`acople_carro_eje_z.stl`)
+Interfaz estructural para vincular el módulo lineal del eje Z al carro del eje X.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_carro_eje_z.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_carro_eje_z_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD</b></td>
+    <td align="center"><b>(b) Pieza impresa e instalada</b></td>
+  </tr>
+</table>
+
+#### 5. Efector Final: Porta-Marcador (`acople_marcador.stl`)
+Efector final (porta-herramientas) con retención cilíndrica para pruebas de validación espacial.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_marcador.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_marcador_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD</b></td>
+    <td align="center"><b>(b) Pieza impresa e instalada</b></td>
+  </tr>
+</table>
+
+#### 6. Sujetador de Correa (`acople_correa_dentada.stl`)
+Mordaza o sujetador dentado para fijar la correa GT2 al carro móvil.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_correa_al_carro.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_correa_dentada_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD</b></td>
+    <td align="center"><b>(b) Pieza impresa e instalada</b></td>
+  </tr>
+</table>
+
+#### 7. Carcasas y Soportes para Sensores AS5600
+
+Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centrado para los imanes diametrales de neodimio. Cada pieza fue diseñada específicamente para la morfología de su respectivo actuador, garantizando la concentricidad y el entrehierro exacto.
+
+**7.1. Sensores Eje Y (Motores NEMA 23)**
+*   **Archivos:** `carcasa_as5600_nema23.stl` y `soporte_iman_nema23.stl`
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_as5600_nema23.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_as5600_nema23_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD (NEMA 23)</b></td>
+    <td align="center"><b>(b) Instalación física en Eje Y</b></td>
+  </tr>
+</table>
+
+**7.2. Sensor Eje X (Motor NEMA 17)**
+*   **Archivos:** `carcasa_as5600_nema17.stl` y `soporte_iman_nema17.stl`
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_as5600_nema17.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_as5600_nema17_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD (NEMA 17)</b></td>
+    <td align="center"><b>(b) Instalación física en Eje X</b></td>
+  </tr>
+</table>
+
+**7.3. Sensor Eje Z (Motor NEMA 11)**
+*   **Archivos:** `carcasa_as5600_nema11.stl` y `soporte_iman_nema11.stl`
+*   *Nota:* El soporte del imán incluye un vástago prolongado diseñado específicamente para insertarse a presión en la cavidad posterior del eje de este motor.
+<table align="center">
+  <tr>
+    <td align="center"><img src="../Imagenes/acople_as5600_nema11.png" width="100%"></td>
+    <td align="center"><img src="../Imagenes/acople_as5600_nema11_real.jpeg" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>(a) Modelo CAD (NEMA 11)</b></td>
+    <td align="center"><b>(b) Instalación física en Eje Z</b></td>
+  </tr>
+</table>
+
+---
 
 ---
 
