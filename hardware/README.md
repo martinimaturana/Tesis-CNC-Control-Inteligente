@@ -32,8 +32,8 @@ Todas las piezas personalizadas fueron manufacturadas mediante deposición fundi
 Base trapezoidal para el acople del pórtico X sobre los carros Y.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/soporte_puente_cad.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/soporte_puente_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/soporte_puente_cad.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/soporte_puente_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
@@ -45,8 +45,8 @@ Base trapezoidal para el acople del pórtico X sobre los carros Y.
 Soporte con nervadura de refuerzo para el motor NEMA 17.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_4040.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_4040_realjpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_4040.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_4040_realjpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
@@ -58,8 +58,8 @@ Soporte con nervadura de refuerzo para el motor NEMA 17.
 Soporte para la polea libre de reenvío GT2 del eje X.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_polea_suelta.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_polea_suelta_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_polea_suelta.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_polea_suelta_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
@@ -71,8 +71,8 @@ Soporte para la polea libre de reenvío GT2 del eje X.
 Interfaz estructural para vincular el módulo lineal del eje Z al carro del eje X.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_carro_eje_z.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_carro_eje_z_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_carro_eje_z.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_carro_eje_z_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
@@ -84,8 +84,8 @@ Interfaz estructural para vincular el módulo lineal del eje Z al carro del eje 
 Efector final (porta-herramientas) con retención cilíndrica para pruebas de validación espacial.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_marcador.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_marcador_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_marcador.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_marcador_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
@@ -97,8 +97,8 @@ Efector final (porta-herramientas) con retención cilíndrica para pruebas de va
 Mordaza o sujetador dentado para fijar la correa GT2 al carro móvil.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_correa_al_carro.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_correa_dentada_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_correa_al_carro.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_correa_dentada_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
@@ -114,8 +114,8 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 *   **Archivos:** `carcasa_as5600_nema23.stl` y `soporte_iman_nema23.stl`
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_as5600_nema23.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_as5600_nema23_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_as5600_nema23.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_as5600_nema23_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD (NEMA 23)</b></td>
@@ -127,8 +127,8 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 *   **Archivos:** `carcasa_as5600_nema17.stl` y `soporte_iman_nema17.stl`
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_as5600_nema17.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_as5600_nema17_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_as5600_nema17.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_as5600_nema17_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD (NEMA 17)</b></td>
@@ -141,8 +141,8 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 *   *Nota:* El soporte del imán incluye un vástago prolongado diseñado específicamente para insertarse a presión en la cavidad posterior del eje de este motor.
 <table align="center">
   <tr>
-    <td align="center"><img src="../Imagenes/acople_as5600_nema11.png" width="100%"></td>
-    <td align="center"><img src="../Imagenes/acople_as5600_nema11_real.jpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_as5600_nema11.png" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_as5600_nema11_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD (NEMA 11)</b></td>
