@@ -47,7 +47,7 @@ Se utilizan 4 controladores TB6600 seleccionados por su disipación pasiva y ais
 
 *Nota de Diseño (Gantry):* Los actuadores del eje Y (Y1 y Y2) no se puentean eléctricamente, sino que utilizan pines GPIO independientes del ESP32 para coordinar la sincronización síncrona por firmware.
 
-## 🗺️ Diagrama de Conexiones e Integración
+##  Diagrama de Conexiones e Integración
 
 El siguiente diagrama esquemático detalla la interconexión completa entre la etapa de control (ESP32 y Raspberry Pi), la etapa de potencia (TB6600) y el sistema de sensórica. 
 
