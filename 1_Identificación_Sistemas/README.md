@@ -18,7 +18,7 @@ Script central de MATLAB (`nema23_v3.m`, escalable a los demás motores) que pro
 **Flujo de procesamiento:**
 1.  **Preprocesamiento:** Aplicación del algoritmo de desenrollado de fase (*unwrap*) sobre los datos crudos del encoder y conversión cinemática al dominio espacial (milímetros).
 2.  **Identificación de Sistemas:** Estimación de modelos paramétricos (ARX, ARMAX, OE) y redes neuronales (MLP). El modelo **Output-Error (OE)** es seleccionado por su superioridad al modelar el actuador como un integrador puro afectado por ruido aditivo en el sensor.
-3.  **Remuestreo (Digital Twin):** La función de transferencia se remuestrea a 1 kHz ($T_s = 1$ ms) para asegurar compatibilidad estricta con el entorno de ejecución en tiempo real del ESP32.
+3.  **Remuestreo (Modelo Digital):** La función de transferencia se remuestrea a 1 kHz ($T_s = 1$ ms) para asegurar compatibilidad estricta con el entorno de ejecución en tiempo real del ESP32.
 4.  **Diseño Inteligente:** 
     *   Sintonización de un controlador Lógico Difuso (FLC) tipo Sugeno PD+I.
     *   Entrenamiento de una red neuronal ANFIS utilizando 500 épocas (algoritmo de aprendizaje híbrido) para clonar y suavizar la superficie difusa experta.
