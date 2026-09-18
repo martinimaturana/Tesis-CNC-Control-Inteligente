@@ -11,9 +11,20 @@ El diseño se basa en una estructura cartesiana de 3 ejes accionada por motores 
 *   **Control (Hard Real-Time):** ESP32 DevKit v1 operando el lazo cerrado a 1 kHz.
 
 ### Dinámica de los Ejes
+
 *   **Eje Y (Pórtico / Gantry):** 2x Motores NEMA 23 + Transmisión por doble husillo T8 (8 mm/rev).
+    <div align="center">
+      <img src="Imagenes/riel lineal.jpeg" width="70%">
+      <p><i>Detalle de la transmisión del Eje Y</i></p>
+    </div>
+
 *   **Eje X (Carro Transversal):** 1x Motor NEMA 17 + Transmisión elástica por correa GT2 (40 mm/rev).
+
 *   **Eje Z (Cabezal Vertical):** 1x Motor NEMA 11 + Transmisión por husillo trapezoidal de paso fino (2 mm/rev).
+    <div align="center">
+      <img src="Imagenes/riel nema11.avif" width="70%">
+      <p><i>Detalle de la transmisión del Eje Z</i></p>
+    </div>
 
 ---
 
