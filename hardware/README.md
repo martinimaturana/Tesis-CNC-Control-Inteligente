@@ -28,7 +28,7 @@ Todas las piezas personalizadas fueron manufacturadas mediante deposición fundi
 
 ### Listado de Piezas:
 
-#### 1. Soporte Base del Puente X (`soporte_base_puente.stl`)
+#### 1. Soporte Base del Puente X (`soporte base puente.stl`)
 Base trapezoidal para el acople del pórtico X sobre los carros Y.
 <table align="center">
   <tr>
@@ -41,7 +41,7 @@ Base trapezoidal para el acople del pórtico X sobre los carros Y.
   </tr>
 </table>
 
-#### 2. Acople Motor Eje X (`acople_motor_x.stl`)
+#### 2. Acople Motor Eje X (`acople perfil 4040 nema17.stl`)
 Soporte con nervadura de refuerzo para el motor NEMA 17.
 <table align="center">
   <tr>
@@ -54,7 +54,7 @@ Soporte con nervadura de refuerzo para el motor NEMA 17.
   </tr>
 </table>
 
-#### 3. Soporte Polea de Reenvío (`acople_polea_suelta.stl`)
+#### 3. Soporte Polea de Reenvío (`acople polea suelta_v2.stl`)
 Soporte para la polea libre de reenvío GT2 del eje X.
 <table align="center">
   <tr>
@@ -67,7 +67,7 @@ Soporte para la polea libre de reenvío GT2 del eje X.
   </tr>
 </table>
 
-#### 4. Acople Módulo Eje Z (`acople_carro_eje_z.stl`)
+#### 4. Acople Módulo Eje Z (`acople eje z a carro eje y.stl`)
 Interfaz estructural para vincular el módulo lineal del eje Z al carro del eje X.
 <table align="center">
   <tr>
@@ -80,7 +80,7 @@ Interfaz estructural para vincular el módulo lineal del eje Z al carro del eje 
   </tr>
 </table>
 
-#### 5. Efector Final: Porta-Marcador (`acople_marcador.stl`)
+#### 5. Efector Final: Porta-Marcador (`acople lapiz marcador.stl`)
 Efector final (porta-herramientas) con retención cilíndrica para pruebas de validación espacial.
 <table align="center">
   <tr>
@@ -93,7 +93,7 @@ Efector final (porta-herramientas) con retención cilíndrica para pruebas de va
   </tr>
 </table>
 
-#### 6. Sujetador de Correa (`acople_correa_dentada.stl`)
+#### 6. Sujetador de Correa (`acople correa gt2 6mm - carro eje y.stl`)
 Mordaza o sujetador dentado para fijar la correa GT2 al carro móvil.
 <table align="center">
   <tr>
@@ -111,7 +111,7 @@ Mordaza o sujetador dentado para fijar la correa GT2 al carro móvil.
 Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centrado para los imanes diametrales de neodimio. Cada pieza fue diseñada específicamente para la morfología de su respectivo actuador, garantizando la concentricidad y el entrehierro exacto.
 
 **7.1. Sensores Eje Y (Motores NEMA 23)**
-*   **Archivos:** `carcasa_as5600_nema23.stl` y `soporte_iman_nema23.stl`
+*   **Archivos:** `acople as5600 nema23.stl` y `soporte iman nema23.stl`
 <table align="center">
   <tr>
     <td align="center"><img src="Imagenes/acople_as5600_nema23.png" width="100%"></td>
@@ -124,7 +124,7 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 </table>
 
 **7.2. Sensor Eje X (Motor NEMA 17)**
-*   **Archivos:** `carcasa_as5600_nema17.stl` y `soporte_iman_nema17.stl`
+*   **Archivos:** `acople as5600 nema17.stl` y `soporte iman nema17.stl`
 <table align="center">
   <tr>
     <td align="center"><img src="Imagenes/acople_as5600_nema17.png" width="100%"></td>
@@ -137,7 +137,7 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 </table>
 
 **7.3. Sensor Eje Z (Motor NEMA 11)**
-*   **Archivos:** `carcasa_as5600_nema11.stl` y `soporte_iman_nema11.stl`
+*   **Archivos:** `acople as5600 nema11.stl` y `soporte iman nema11.stl`
 *   *Nota:* El soporte del imán incluye un vástago prolongado diseñado específicamente para insertarse a presión en la cavidad posterior del eje de este motor.
 <table align="center">
   <tr>
