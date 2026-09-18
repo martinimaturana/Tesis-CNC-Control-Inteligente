@@ -32,7 +32,7 @@ El diseño se basa en una estructura cartesiana de 3 ejes accionada por motores 
 
 Todas las piezas personalizadas fueron manufacturadas mediante deposición fundida (FDM). Puedes encontrar los archivos `.stl` listos para imprimir en la carpeta `STLs hardware mecanico/` de este directorio.
 
-** Parámetros de impresión críticos (Recomendados):**
+**Parámetros de impresión críticos (Recomendados):**
 *   **Material:** PLA+ (Requerido por su estabilidad dimensional y resistencia a la tracción de 50-60 MPa).
 *   **Relleno (Infill):** 70% con patrón **Giroide** (TPMS) para optimizar la rigidez específica ante flexo-torsión.
 *   **Perímetros (Paredes):** 4 perímetros.
