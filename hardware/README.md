@@ -183,12 +183,13 @@ El tablero de control utiliza una fuente de 24 VDC / 14.6A para la etapa de pote
 
 ---
 
-## Lista de Materiales (BOM)
+## 📋 Lista de Materiales (BOM)
 
 El costo directo de hardware (BOM) estimado de esta plataforma es de ~$769 USD, demostrando que es posible obtener buena precisión mediante el uso de inteligencia computacional.
+
+📥 **[Descargar la Lista de Materiales Completa (Excel)](COSTOS_CNC.xlsx)**
 
 *   **Estructura:** Perfiles de aluminio V-Slot (40x20 y 40x40), 1 kg PLA+.
 *   **Transmisión:** 2x Kits C-Beam XL 1000, 1x riel lineal T-type (100mm), correa y polea GT2.
 *   **Potencia:** Fuente Mean Well 24VDC/14.6A, Conversor DC-DC XL4016, 4x Drivers TB6600.
 *   **Control y Sensores:** 1x ESP32 DevKit v1, 1x Raspberry Pi 4 Model B (4GB), 3x Encoders magnéticos AS5600.
-
