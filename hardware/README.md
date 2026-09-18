@@ -46,7 +46,7 @@ Soporte con nervadura de refuerzo para el motor NEMA 17.
 <table align="center">
   <tr>
     <td align="center"><img src="Imagenes/acople_4040.png" width="100%"></td>
-    <td align="center"><img src="Imagenes/acople_4040_realjpeg" width="100%"></td>
+    <td align="center"><img src="Imagenes/acople_4040_real.jpeg" width="100%"></td>
   </tr>
   <tr>
     <td align="center"><b>(a) Modelo CAD</b></td>
