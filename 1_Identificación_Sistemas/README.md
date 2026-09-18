@@ -5,7 +5,7 @@ Esta carpeta contiene el código fuente necesario para extraer el modelo matemá
 La metodología se divide en dos etapas secuenciales alojadas en sus respectivas subcarpetas:
 
 ## 1. Adquisición de Datos (`esp32_data_logging/`)
-Contiene el firmware en C++ ejecutado en el microcontrolador ESP32 para excitar dinámicamente los actuadores y recolectar telemetría de alta fidelidad. 
+Contiene el firmware en C++ ejecutado en el microcontrolador ESP32 para excitar dinámicamente los actuadores y recolectar telemetría. 
 
 **Características principales:**
 *   **Inyección Pseudoaleatoria:** Generación de un tren de pulsos (STEP/DIR) con cambios de dirección variables y ráfagas para capturar la inercia y fricción de cada eje.
