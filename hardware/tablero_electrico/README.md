@@ -60,5 +60,25 @@ El siguiente diagrama esquemático detalla la interconexión completa entre la e
 * **Sincronización del Eje Y (Gantry):** Los actuadores Y1 y Y2 utilizan pines GPIO independientes en el ESP32 para asegurar sincronismo por firmware, sin puentear señales.
 * **Buses I2C (Direcciones 0x36):** Para evitar colisiones entre los encoders AS5600, se utilizó un mapeo multinivel: I2C_0 (Hardware) para el eje Y, I2C_1 (Hardware) para el eje X, e I2C (Software / Bit-Banging) para el eje Z.
 
+---
+
+## Esquema Electrónico y Asignación de Pines
+
+El tablero de control utiliza una fuente de 24 VDC / 14.6A para la etapa de potencia (Drivers TB6600 ajustados a 1/8 de microstepping = 1600 pul/rev) y un regulador Step-Down XL4016 (5 VDC) para la electrónica lógica.
+
+### Pinout del ESP32 (Microcontrolador de Tiempo Real)
+
+| Subsistema / Actuador | Pin ESP32 | Función Específica |
+| :--- | :---: | :--- |
+| **Eje X** (NEMA 17) | `GPIO 27` (PUL) / `GPIO 33` (DIR) | Generación de pasos y dirección. |
+| **Eje Y1 Principal** (NEMA 23) | `GPIO 2` (PUL) / `GPIO 15` (DIR) | Control de motor primario pórtico. |
+| **Eje Y2 Secundario** (NEMA 23) | `GPIO 32` (PUL) / `GPIO 23` (DIR) | Control síncrono del pórtico (Gantry). |
+| **Eje Z** (NEMA 11) | `GPIO 25` (PUL) / `GPIO 26` (DIR) | Generación de pasos y dirección. |
+| **Sensor Eje Y1** (AS5600) | `GPIO 21` (SDA) / `GPIO 22` (SCL) | I2C Hardware 0 (Bus principal). |
+| **Sensor Eje X** (AS5600) | `GPIO 18` (SDA) / `GPIO 19` (SCL) | I2C Hardware 1. |
+| **Sensor Eje Z** (AS5600) | `GPIO 4` (SDA) / `GPIO 5` (SCL) | I2C vía Software (Bit-Banging). |
+
+---
+
 ## Archivos 3D (STL) en esta carpeta
 En este directorio se incluyen los modelos para manufactura aditiva correspondientes a las sujeciones internas del gabinete (ej. rieles DIN en PLA+, soportes para la placa de expansión del ESP32, montajes del conversor DC-DC, etc).
