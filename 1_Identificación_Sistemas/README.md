@@ -1,4 +1,4 @@
-# Fase 1: Identificación de Sistemas y Gemelo Digital
+# Fase 1: Identificación de Sistemas y Modelo Digital
 
 Esta carpeta contiene el código fuente necesario para extraer el modelo matemático de la planta física (operando en lazo abierto) y el entorno de simulación computacional donde se sintetizan y validan los algoritmos de control antes de su despliegue en hardware. 
 
