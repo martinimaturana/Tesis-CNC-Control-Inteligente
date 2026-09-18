@@ -47,5 +47,18 @@ Se utilizan 4 controladores TB6600 seleccionados por su disipación pasiva y ais
 
 *Nota de Diseño (Gantry):* Los actuadores del eje Y (Y1 y Y2) no se puentean eléctricamente, sino que utilizan pines GPIO independientes del ESP32 para coordinar la sincronización síncrona por firmware.
 
+## 🗺️ Diagrama de Conexiones e Integración
+
+El siguiente diagrama esquemático detalla la interconexión completa entre la etapa de control (ESP32 y Raspberry Pi), la etapa de potencia (TB6600) y el sistema de sensórica. 
+
+<div align="center">
+  <img src="../Imagenes/DIAGRAMA_ELECTRICO.png" width="100%">
+  <p><b>Interconexión eléctrica de la plataforma CNC (Actuadores, Drivers y Encoders I2C)</b></p>
+</div>
+
+**Consideraciones críticas de ruteo:**
+* **Sincronización del Eje Y (Gantry):** Los actuadores Y1 y Y2 utilizan pines GPIO independientes en el ESP32 para asegurar sincronismo por firmware, sin puentear señales.
+* **Buses I2C (Direcciones 0x36):** Para evitar colisiones entre los encoders AS5600, se utilizó un mapeo multinivel: I2C_0 (Hardware) para el eje Y, I2C_1 (Hardware) para el eje X, e I2C (Software / Bit-Banging) para el eje Z.
+
 ## Archivos 3D (STL) en esta carpeta
 En este directorio se incluyen los modelos para manufactura aditiva correspondientes a las sujeciones internas del gabinete (ej. rieles DIN en PLA+, soportes para la placa de expansión del ESP32, montajes del conversor DC-DC, etc).
