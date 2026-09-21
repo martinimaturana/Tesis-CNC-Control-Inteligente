@@ -25,11 +25,16 @@ Scripts de MATLAB que procesan el archivo `.csv` descargado, estiman la planta m
 
 **Flujo de procesamiento analítico:**
 1.  **Acondicionamiento:** Desenvolvimiento de fase (*unwrap*) de los datos crudos del encoder y conversión al dominio espacial métrico (ej. 8 mm/rev para el eje Y).
-2.  **Evaluación de Estructuras:** Se evalúan modelos paramétricos (ARX, ARMAX, OE) y red neuronal (MLP).
+    <div align="center">
+      <img src="../Imagenes/angulo_a_mm_nema23.png" width="70%">
+      <p><i>Transformación de la lectura angular cruda del AS5600 a desplazamiento continuo</i></p>
+    </div>
+
+2.  **Evaluación de Estructuras:** Se evalúan modelos paramétricos (ARX, ARMAX, OE) y redes neuronales (MLP).
 3.  **Selección del Modelo OE:** La estructura **Output-Error (OE)** demostró sistemáticamente el mejor ajuste (sobre 98%). Este modelo aísla el ruido de medición del sensor sin distorsionar la naturaleza de "integrador puro" del actuador paso a paso.
 
 <div align="center">
-  <img src="../Imagenes/comparativa_modelos.png" width="80%">
+  <img src="../Imagenes/modelos_lineales_vs_mlp_nema23.png" width="80%">
   <p><i>Comparativa de ajuste (Fit) evidenciando la superioridad del modelo Output-Error frente a la dinámica real del motor</i></p>
 </div>
 
@@ -40,9 +45,12 @@ La función de transferencia discreta extraída ($T_s = 20,2$ ms) es:
 
 $$G(z) = \frac{0,05286z^{-1} - 0,01891z^{-2}}{1 - 1,6620z^{-1} + 0,6618z^{-2}}$$
 
-Posteriormente, el script remuestrea automáticamente este modelo a **1 kHz ($T_s = 1$ ms)** para garantizar que las simulaciones de control coincidan exactamente con la frecuencia de interrupción del ESP32 en tiempo real.
+<div align="center">
+  <img src="../Imagenes/analisis_dinamico_lazo_abierto_nema23.png" width="70%">
+  <p><i>Análisis dinámico en lazo abierto de la planta equivalente identificada (Respuesta temporal del Eje Y)</i></p>
+</div>
 
----
+Posteriormente, el script remuestrea automáticamente este modelo a **1 kHz ($T_s = 1$ ms)** para garantizar que las simulaciones de control coincidan exactamente con la frecuencia de interrupción del ESP32 en tiempo real.
 
 ##  Guía de Ejecución (Cómo reproducir la Identificación)
 
