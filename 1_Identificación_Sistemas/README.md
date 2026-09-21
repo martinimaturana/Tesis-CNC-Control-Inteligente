@@ -34,7 +34,7 @@ Scripts de MATLAB que procesan el archivo `.csv` descargado, estiman la planta m
 3.  **Selección del Modelo OE:** La estructura **Output-Error (OE)** demostró sistemáticamente el mejor ajuste (sobre 98%). Este modelo aísla el ruido de medición del sensor sin distorsionar la naturaleza de "integrador puro" del actuador paso a paso.
 
 <div align="center">
-  <img src="../Imagenes/modelos_lineales_vs_mlp_nema23.png" width="80%">
+  <img src="../hardware/Imagenes/modelos_lineales_vs_mlp_nema23.png" width="80%">
   <p><i>Comparativa de ajuste (Fit) evidenciando la superioridad del modelo Output-Error frente a la dinámica real del motor</i></p>
 </div>
 
@@ -46,7 +46,7 @@ La función de transferencia discreta extraída ($T_s = 20,2$ ms) es:
 $$G(z) = \frac{0,05286z^{-1} - 0,01891z^{-2}}{1 - 1,6620z^{-1} + 0,6618z^{-2}}$$
 
 <div align="center">
-  <img src="../Imagenes/analisis_dinamico_lazo_abierto_nema23.png" width="70%">
+  <img src="../hardware/Imagenes/analisis_dinamico_lazo_abierto_nema23.png" width="70%">
   <p><i>Análisis dinámico en lazo abierto de la planta equivalente identificada (Respuesta temporal del Eje Y)</i></p>
 </div>
 
