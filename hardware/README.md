@@ -204,4 +204,4 @@ Con la plataforma mecánica ensamblada y la electrónica integrada, la máquina 
 
 Para diseñar algoritmos de control de alta precisión (PID, FLC, ANFIS) no podemos depender de la sintonización empírica o "prueba y error", ya que esto es ineficiente y puede comprometer la integridad mecánica de las transmisiones. Por lo tanto, antes de mover la máquina, necesitamos extraer un modelo matemático exacto de su comportamiento.
 
-**[Ir a la Fase 1: Identificación de Sistemas y Gemelo Digital](../1_Identificacion_Sistemas/)**
+**[Ir a la Fase 1: Identificación de Sistemas y Gemelo Digital](../1_Identificación_Sistemas/)**
