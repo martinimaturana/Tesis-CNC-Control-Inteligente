@@ -167,7 +167,7 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 
 ## Esquema Electrónico y Asignación de Pines
 
-> **Nota de Integración:** Para ver en profundidad la distribución espacial, los criterios de aislamiento de ruido (EMI), el diagrama esquemático completo y los archivos 3D específicos del gabinete eléctrico, dirígete a la subcarpeta **[Tablero Eléctrico y Electrónica de Control](tablero_electrico/)**.
+> **Nota de Integración:** Para ver en profundidad la distribución espacial, el diagrama esquemático completo y los archivos 3D específicos del gabinete eléctrico, dirígete a la subcarpeta **[Tablero Eléctrico y Electrónica de Control](tablero_electrico/)**.
 
 El tablero de control utiliza una fuente de 24 VDC / 14.6A para la etapa de potencia (Drivers TB6600 ajustados a 1/8 de microstepping = 1600 pul/rev) y un regulador Step-Down XL4016 (5 VDC) para la electrónica lógica.
 
