@@ -22,11 +22,16 @@ Para atenuar la amplificación del ruido de cuantización inherente a los encode
 Como alternativa a las limitaciones del control lineal frente a dinámicas variantes en el tiempo, se diseñó un sistema de inferencia difusa Takagi-Sugeno de orden cero. 
 
 *   **Arquitectura PD+I:** El núcleo difuso evalúa el error de posición ($e$) y la derivada del error ($\Delta e$) actuando como un compensador PD. En paralelo, un integrador lineal compensa el error en régimen permanente.
-*   **Base de Reglas:** Se establecieron 5 funciones de pertenencia (NB, NS, Z, PS, PB) para cada entrada, consolidando una base paramétrica de 25 reglas lógicas con salidas constantes (*singletons*).
+*   **Base de Reglas (Heurística):** Se establecieron 5 funciones de pertenencia (NB, NS, Z, PS, PB) para cada entrada, consolidando una base paramétrica de 25 reglas lógicas con salidas constantes (*singletons*).
+
+Para ilustrar el mecanismo de toma de decisiones de la lógica de inferencia, el controlador evalúa condiciones operativas (Reglas IF-THEN) como las siguientes:
+1.  **Regla de Aceleración Máxima:** `IF (Error es NB) AND (Derivada es NB) THEN (Salida es NB)`. Escenario: La planta presenta un desfase negativo considerable y la velocidad de dicho desfase aumenta; el controlador exige el máximo esfuerzo negativo del actuador.
+2.  **Regla de Régimen Estacionario:** `IF (Error es Z) AND (Derivada es Z) THEN (Salida es Z)`. Escenario: La planta ha alcanzado la referencia geométrica y su velocidad relativa es nula; el controlador anula la señal de mando para evitar oscilaciones y desgaste.
+3.  **Regla de Freno Inercial:** `IF (Error es PB) AND (Derivada es NB) THEN (Salida es Z)`. Escenario: La planta presenta un desfase positivo, pero la inercia del sistema ya está reduciendo dicho error a alta velocidad; el controlador interrumpe el esfuerzo motriz para prevenir un sobreimpulso (*overshoot*).
 
 <div align="center">
   <img src="../hardware/Imagenes/diagrama_flc.png" width="80%">
-  <p><i>Estructura general del Controlador Lógico Difuso Sugeno </i></p>
+  <p><i>Estructura general del Controlador Lógico Difuso Sugeno (PD+I)</i></p>
 </div>
 
 A continuación, se presenta la morfología de los conjuntos de entrada y la distribución paramétrica de los *singletons* de salida:
@@ -55,11 +60,35 @@ Para optimizar la superficie de control obtenida empíricamente, se implementó 
 
 ---
 
+## Hiperparámetros y Sintonización (Guía de Adaptación)
+
+Para replicar la metodología en arquitecturas CNC con dinámicas disímiles, se deben reajustar los siguientes hiperparámetros en los scripts de síntesis:
+
+### Control Lineal (PID)
+*   $K_p$ **(Ganancia Proporcional):** Determina la rigidez del seguimiento. Su incremento reduce el tiempo de subida, pero amplifica el sobreimpulso y el requerimiento de corriente del motor.
+*   $K_i$ **(Ganancia Integral):** Suprime el error en régimen permanente. Valores excesivos inducen inestabilidad temporal por el fenómeno de *windup* frente a la fricción estática del sistema mecánico.
+*   $K_d$ **(Ganancia Derivativa):** Proporciona amortiguamiento dinámico, frenando el actuador anticipadamente frente a variaciones inerciales.
+
+### Control Lógico Difuso (FLC)
+Dado que el universo de discurso de los controladores difusos está normalizado internamente (ej. $[-50, 50]$ para la entrada de error y $[-150, 150]$ para la derivada), la adaptación a unidades físicas de medición se realiza mediante factores de escala:
+*   $G_e$ **(Ganancia de Error):** Escala el error de posición métrico antes del proceso de fuzificación. Un incremento en $G_e$ aumenta la sensibilidad del controlador ante desviaciones espaciales submili-métricas.
+*   $G_{de}$ **(Ganancia de Derivada):** Escala la tasa de cambio del error. Define el nivel de amortiguación virtual; un valor elevado suaviza la trayectoria pero incrementa el tiempo de asentamiento.
+*   $K_{flc}$ **(Ganancia Integral Paralela):** Define la magnitud del acumulador integral discreto acoplado a la salida del PD difuso para asegurar convergencia estricta a estado estacionario.
+
+### Red Neuro-Difusa (ANFIS)
+La clonación y optimización de la superficie requiere la parametrización específica de la red neuronal mediante la función `anfisOptions`:
+*   **Funciones de Pertenencia (MFs):** Se utilizan 5 funciones por entrada matemática (`[5 5]`) para mantener la equivalencia topológica con la matriz de 25 reglas del FLC original.
+*   **Tipo de MF:** Se configuran funciones de campana generalizada (`gbellmf`) para los antecedentes, garantizando derivabilidad continua y un mapeo espacial exento de aristas lógicas.
+*   **Épocas de Entrenamiento (`EpochNumber`):** El hiperparámetro se fijó en 500 iteraciones. Este volumen asegura la convergencia del Error Cuadrático Medio (RMSE) de la red sin incurrir en sobreajuste (*overfitting*).
+*   **Método de Optimización:** Algoritmo Híbrido (Gradient Descent + LSE).
+
+---
+
 ## Parámetros de Simulación y No Linealidades (MATLAB)
 
 El entorno de simulación evalúa la robustez de los algoritmos mediante la inyección analítica de perturbaciones y no linealidades mecánicas. Para replicar los ensayos, se deben configurar los siguientes parámetros en los scripts `nema17_v4.m`, `nema23_v3_2.m` y `nema11_v3.m`:
 
-1.  **Filtro Derivativo (`alpha = 0.002`):** Establece una frecuencia de corte de $\approx 0.8$ Hz. Este factor de atenuación es crítico a 1 kHz; valores superiores introducen ruido estocástico en la derivada, induciendo oscilaciones de alta frecuencia (*chattering*) que pueden saturar la etapa de potencia.
+1.  **Filtro Derivativo Global (`alpha = 0.002`):** Establece una frecuencia de corte de $\approx 0.8$ Hz. Este factor de atenuación es crítico a 1 kHz; valores superiores introducen ruido estocástico en la derivada, induciendo oscilaciones de alta frecuencia (*chattering*) que pueden saturar la etapa de potencia.
 2.  **No Linealidades (`flags` activas):** 
     *   Fricción de Coulomb y fricción viscosa.
     *   Juego mecánico (Backlash): 0.5 mm en husillos y 0.2 mm en poleas/correas.
@@ -95,7 +124,7 @@ La evaluación iterativa de 25 reglas de inferencia difusa exige una carga compu
 
 Para asegurar determinismo temporal, el script de MATLAB mapea el espacio de estados continuo de las estrategias FLC y ANFIS y lo discretiza en matrices constantes bidimensionales (**Tablas de Búsqueda de 21x21 puntos**). Al finalizar la simulación, el código genera la sintaxis en C++ (ej. `const float matriz_anfis_X[21][21]`). 
 
-La integración de estas matrices en el firmware reduce la complejidad algorítmica de $\mathcal{O}(N)$ a $\mathcal{O}(1)$ mediante una interpolación bilineal que requiere un tiempo de ejecución de procesamiento inferior a $12 \mu\text{s}$.
+La integración de estas matrices en el firmware reduce la complejidad algorítmica de $\mathcal{O}(N)$ a $\mathcal{O}(1)$ mediante una interpolación bilineal que requiere un tiempo de ejecución de procesamiento inferior a $12 \, \mu\text{s}$.
 
 <div align="center">
   <img src="../hardware/Imagenes/superficie_3d_anfis.png" width="60%">
@@ -106,6 +135,6 @@ La integración de estas matrices en el firmware reduce la complejidad algorítm
 
 ## Siguiente Paso: Implementación y Validación en Hardware
 
-Con las tablas de interpolación generadas y las constantes PID definidas, la etapa final contempla la inyección de la lógica en el ESP32 para ejecutar interpolaciones multieje (polígonos y espirales) comprobando empíricamente el error de contorno espacial sobre la plataforma CNC.
+Con las tablas de interpolación generadas y las constantes paramétricas definidas, la etapa final contempla la inyección de la lógica en el ESP32 para ejecutar interpolaciones multieje (polígonos y espirales) comprobando empíricamente el error de contorno espacial sobre la plataforma CNC.
 
 **[Ir a la Fase 3: Ejecución en Lazo Cerrado (Hardware)](../3_Ejecucion_Lazo_Cerrado/)**
