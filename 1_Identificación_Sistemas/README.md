@@ -26,7 +26,7 @@ Scripts de MATLAB que procesan el archivo `.csv` descargado, estiman la planta m
 **Flujo de procesamiento analítico:**
 1.  **Acondicionamiento:** Desenvolvimiento de fase (*unwrap*) de los datos crudos del encoder y conversión al dominio espacial métrico (ej. 8 mm/rev para el eje Y).
     <div align="center">
-      <img src="../Imagenes/angulo_a_mm_nema23.png" width="70%">
+      <img src="../hardware/Imagenes/angulo_a_mm_nema23.png" width="70%">
       <p><i>Transformación de la lectura angular cruda del AS5600 a desplazamiento continuo</i></p>
     </div>
 
