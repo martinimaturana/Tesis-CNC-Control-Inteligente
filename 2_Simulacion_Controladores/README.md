@@ -95,7 +95,7 @@ La evaluación iterativa de 25 reglas de inferencia difusa exige una carga compu
 
 Para asegurar determinismo temporal, el script de MATLAB mapea el espacio de estados continuo de las estrategias FLC y ANFIS y lo discretiza en matrices constantes bidimensionales (**Tablas de Búsqueda de 21x21 puntos**). Al finalizar la simulación, el código genera la sintaxis en C++ (ej. `const float matriz_anfis_X[21][21]`). 
 
-La integración de estas matrices en el firmware reduce la complejidad algorítmica de $\mathcal{O}(N)$ a $\mathcal{O}(1)$ mediante una interpolación bilineal que requiere un tiempo de ejecución de procesamiento inferior a $12 \ mu\text{s}$.
+La integración de estas matrices en el firmware reduce la complejidad algorítmica de $\mathcal{O}(N)$ a $\mathcal{O}(1)$ mediante una interpolación bilineal que requiere un tiempo de ejecución de procesamiento inferior a $12 \mu\text{s}$.
 
 <div align="center">
   <img src="../hardware/Imagenes/superficie_3d_anfis.png" width="60%">
