@@ -39,7 +39,7 @@ Scripts de MATLAB que procesan el archivo `.csv` descargado, estiman la planta m
 </div>
 
 ### Resultado: Dinámica Obtenida (Modelo Digital)
-A modo de ejemplo, tras la ejecución del script para el **Eje Y (Motor NEMA 23)**, el sistema identifica una dinámica de segundo orden que captura fielmente la inercia del pórtico y las latencias de conmutación de los optoacopladores. 
+A modo de ejemplo, tras la ejecución del script para el **Eje Y (Motor NEMA 23)**, el sistema identifica una dinámica de segundo orden que captura la inercia del pórtico y las latencias de conmutación de los optoacopladores. 
 
 La función de transferencia discreta extraída ($T_s = 20,2$ ms) es:
 
