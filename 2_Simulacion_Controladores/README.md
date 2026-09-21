@@ -98,7 +98,7 @@ Para asegurar determinismo temporal, el script de MATLAB mapea el espacio de est
 La integración de estas matrices en el firmware reduce la complejidad algorítmica de $\mathcal{O}(N)$ a $\mathcal{O}(1)$ mediante una interpolación bilineal que requiere un tiempo de ejecución de procesamiento inferior a 12 $\mu$s.
 
 <div align="center">
-  <img src="../Imagenes/superficie_3d_anfis.png" width="60%">
+  <img src="../hardware/Imagenes/superficie_3d_anfis.png" width="60%">
   <p><i>Superficie de control no lineal (LUT 21x21) optimizada por ANFIS</i></p>
 </div>
 
