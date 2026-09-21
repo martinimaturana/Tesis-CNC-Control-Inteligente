@@ -167,6 +167,8 @@ Conjunto de carcasas protectoras para la placa del sensor y adaptadores de centr
 
 ## Esquema Electrónico y Asignación de Pines
 
+> **Nota de Integración:** Para ver en profundidad la distribución espacial, los criterios de aislamiento de ruido (EMI), el diagrama esquemático completo y los archivos 3D específicos del gabinete eléctrico, dirígete a la subcarpeta **[Tablero Eléctrico y Electrónica de Control](tablero_electrico/)**.
+
 El tablero de control utiliza una fuente de 24 VDC / 14.6A para la etapa de potencia (Drivers TB6600 ajustados a 1/8 de microstepping = 1600 pul/rev) y un regulador Step-Down XL4016 (5 VDC) para la electrónica lógica.
 
 ### Pinout del ESP32 (Microcontrolador de Tiempo Real)
@@ -193,3 +195,13 @@ El costo directo de hardware (BOM) estimado de esta plataforma es de ~$769 USD, 
 *   **Transmisión:** 2x Kits C-Beam XL 1000, 1x riel lineal T-type (100mm), correa y polea GT2.
 *   **Potencia:** Fuente Mean Well 24VDC/14.6A, Conversor DC-DC XL4016, 4x Drivers TB6600.
 *   **Control y Sensores:** 1x ESP32 DevKit v1, 1x Raspberry Pi 4 Model B (4GB), 3x Encoders magnéticos AS5600.
+
+---
+
+## Siguiente Paso: Identificación de Sistemas
+
+Con la plataforma mecánica ensamblada y la electrónica integrada, la máquina ya es funcional. 
+
+Para diseñar algoritmos de control de alta precisión (PID, FLC, ANFIS) no podemos depender de la sintonización empírica o "prueba y error", ya que esto es ineficiente y puede comprometer la integridad mecánica de las transmisiones. Por lo tanto, antes de mover la máquina, necesitamos extraer un modelo matemático exacto de su comportamiento.
+
+**[Ir a la Fase 1: Identificación de Sistemas y Gemelo Digital](../1_Identificacion_Sistemas/)**
