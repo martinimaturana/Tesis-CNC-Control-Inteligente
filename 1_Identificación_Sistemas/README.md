@@ -7,7 +7,7 @@ Antes de diseñar algoritmos de control de alta precisión (PID, FLC, ANFIS), es
 Por lo tanto, el objetivo de esta fase es excitar la máquina en lazo abierto, registrar su respuesta y utilizar técnicas de Identificación de Sistemas para obtener la **Función de Transferencia Nominal** de cada eje. Este modelo matemático será la base para la simulación y diseño de los controladores en la siguiente etapa.
 
 >  **IMPORTANTE: ARQUITECTURA AISLADA POR EJE**
-> Debido a que cada eje utiliza un sistema de transmisión distinto (Correa GT2, Doble Husillo, Husillo de paso fino), la dinámica varía enormemente. Por esta razón, **cada motor tiene su propio código de captura en el ESP32 y su propio script de estimación en MATLAB**. 
+> Debido a que cada eje utiliza un sistema de transmisión distinto (Correa GT2, Doble Husillo, Husillo de paso fino), la dinámica varía. Por esta razón, **cada motor tiene su propio código de captura en el ESP32 y su propio script de estimación en MATLAB**. 
 
 ---
 
