@@ -26,7 +26,7 @@ Como alternativa a las limitaciones del control lineal frente a dinámicas varia
 
 <div align="center">
   <img src="../hardware/Imagenes/diagrama_flc.png" width="80%">
-  <p><i>Estructura general del Controlador Lógico Difuso Sugeno (PD+I)</i></p>
+  <p><i>Estructura general del Controlador Lógico Difuso Sugeno </i></p>
 </div>
 
 A continuación, se presenta la morfología de los conjuntos de entrada y la distribución paramétrica de los *singletons* de salida:
